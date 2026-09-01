@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jessie James C. Parajes - creative developer and multimedia designer portfolio.">
+    <title>Jessie James | Creative Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/config.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <span class="ink-cursor" aria-hidden="true"></span>
+
+    <header class="topbar">
+        <div class="progress" aria-hidden="true"><span id="scroll-progress"></span></div>
+        <nav class="page-shell nav-wrap" aria-label="Primary navigation">
+            <a class="brand" href="#top">JESSIE<span>.MAKES</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="#about">About</a>
+                <a href="#work">Art archive</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="flex items-center gap-2">
+                <button class="round-button" id="theme-toggle" type="button" aria-label="Switch color theme"><i class="fa-solid fa-lightbulb"></i></button>
+                <button class="round-button menu-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="page-shell hero-grid">
+                <div class="reveal">
+                    <span class="eyebrow">Creative developer + multimedia maker</span>
+                    <h1>Ideas into<br><span class="painted">playable</span><br>things.</h1>
+                    <p class="hero-copy">Hi, I’m <strong>Jessie James C. Parajes</strong>—an Information Technology student who mixes code, game design, 3D experiments, pixel art, interfaces, and motion into work that feels alive.</p>
+                    <div class="hero-actions">
+                        <a class="brush-button" href="#work">Open the sketchbook <i class="fa-solid fa-arrow-down"></i></a>
+                        <a class="brush-button secondary" href="#contact">Make something together</a>
+                    </div>
+                </div>
+
+                <div class="portrait-stage reveal" data-tilt-wrap>
+                    <div class="portrait-brackets" aria-hidden="true"></div>
+                    <div class="portrait-tilt-group" data-tilt-card>
+                        <span class="tape one" aria-hidden="true"></span>
+                        <span class="tape two" aria-hidden="true"></span>
+                        <div class="hello-arm" aria-hidden="true">
+                            <img src="assets/generated/human-hi-arm.png" alt="">
+                        </div>
+                        <div class="portrait-frame">
+                            <img src="assets/for profile/sample2.jpg" alt="Portrait of Jessie James C. Parajes">
+                            <span class="portrait-caption">Jessie, in the wild ✦</span>
+                        </div>
+                        <div class="profile-crawler-grip-stage" data-profile-crawler-front aria-hidden="true"></div>
+                        <span class="orbit-note a">code + color<br>+ curiosity</span>
+                        <span class="orbit-note b">currently building<br>weird little worlds →</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="page-shell">
+                <header class="section-heading reveal">
+                    <span class="section-count">01 / About the maker</span>
+                    <h2>Half logic.<br>Half imagination.</h2>
+                    <div class="rust-guard-stage" data-rust-guard tabindex="0" aria-label="Rushguard robot. Hover to make it walk.">
+                        <span class="rust-guard-label">RUSHGUARD</span>
+                    </div>
+                    <p>I enjoy the space where systems become experiences—where a working interface can still have personality and a game mechanic can tell a story.</p>
+                </header>
+
+                <div class="about-grid">
+                    <article class="paper-note noise-card reveal">
+                        <h3>What’s in my sketchbook?</h3>
+                        <p>I’m pursuing a Bachelor of Science in Information Technology at PHINMA Cagayan de Oro College. My work moves between full-stack development, mobile applications, game development, UI/UX, digital assets, and multimedia editing.</p>
+                        <p>I learn by making: sketch the idea, build the rough version, test the feeling, then polish the details until the experience clicks.</p>
+                    </article>
+                    <div class="tool-board reveal" aria-label="Creative toolbox">
+                        <article class="tool-card"><i class="fa-solid fa-code"></i><h3>Build</h3><p>JavaScript, PHP, React, Flutter, HTML, CSS, MySQL</p></article>
+                        <article class="tool-card"><i class="fa-solid fa-gamepad"></i><h3>Play</h3><p>Unity, C#, gameplay systems, pixel animation</p></article>
+                        <article class="tool-card"><i class="fa-solid fa-cube"></i><h3>Shape</h3><p>Blender, Three.js, 3D characters and environments</p></article>
+                        <article class="tool-card"><i class="fa-solid fa-wand-magic-sparkles"></i><h3>Polish</h3><p>Figma, Photoshop, Illustrator, Premiere, After Effects</p></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <div class="page-shell">
+                <header class="section-heading reveal">
+                    <span class="section-count">02 / Selected experiments</span>
+                    <h2>The messy,<br>colorful archive.</h2>
+                    <p>Four corners of my creative practice. Use the arrows, wait for the pages to turn, or click any artwork for a closer look.</p>
+                </header>
+
+                <div class="gallery-stack">
+                    <article class="art-chapter reveal">
+                        <div class="art-carousel" data-carousel data-label="Archive 01 · 3D character lab">
+                            <div class="slide active"><button type="button" data-lightbox><img src="assets/3D art animation/Screenshot 2026-08-31 211152.png" alt="3D scrap crawler character model"></button></div>
+                            <div class="slide"><button type="button" data-lightbox><img src="assets/3D art animation/Screenshot 2026-08-31 211207.png" alt="3D robot character with shield"></button></div>
+                            <div class="slide"><button type="button" data-lightbox><img src="assets/3D art animation/Screenshot 2026-08-31 211227.png" alt="3D stylized combat character"></button></div>
+                            <div class="slide"><button type="button" data-lightbox><img src="assets/3D art animation/Screenshot 2026-08-31 211239.png" alt="3D robot character model"></button></div>
+                            <video class="art-hover-video" data-hover-video muted loop playsinline preload="metadata" poster="assets/3D art animation/Screenshot 2026-08-31 211152.png" aria-label="Robots with odd jobs video preview">
+                                <source src="assets/3D art animation/lv_0_20260901150638.mp4" type="video/mp4">
+                            </video>
+                            <div class="carousel-controls"><button class="carousel-arrow prev" type="button" aria-label="Previous 3D artwork"><i class="fa-solid fa-arrow-left"></i></button><div class="carousel-dots"></div><button class="carousel-arrow next" type="button" aria-label="Next 3D artwork"><i class="fa-solid fa-arrow-right"></i></button></div>
+                        </div>
+                        <div class="art-copy"><span class="scribble">built from boxes, bolts & attitude</span><h3>Robots with<br>odd jobs.</h3><p>A lineup of stylized 3D enemies and allies designed around clear combat roles. Shape language, color blocking, and exaggerated equipment make every unit recognizable before it even moves.</p><div class="tag-row"><span class="tag">Blender</span><span class="tag">Three.js</span><span class="tag">Character design</span><span class="tag">3D animation</span></div><span class="chapter-number">01</span></div>
+                    </article>
+
+                    <article class="art-chapter reveal">
+                        <div class="art-carousel" data-carousel data-label="Archive 02 · Sprite studies">
+                            <div class="slide active"><button type="button" data-lightbox><img src="assets/2d pixelated pixel art animation/Screenshot 2026-01-27 145216 (1) (1).png" alt="Pixel art male character walk cycle sprite sheet"></button></div>
+                            <div class="slide"><button type="button" data-lightbox><img src="assets/2d pixelated pixel art animation/Screenshot 2026-01-29 0857411.png" alt="Pixel art female character walk cycle sprite sheet"></button></div>
+                            <div class="carousel-controls"><button class="carousel-arrow prev" type="button" aria-label="Previous pixel art"><i class="fa-solid fa-arrow-left"></i></button><div class="carousel-dots"></div><button class="carousel-arrow next" type="button" aria-label="Next pixel art"><i class="fa-solid fa-arrow-right"></i></button></div>
+                        </div>
+                        <div class="art-copy pixel-art-copy">
+                            <span class="scribble">tiny frames, big personality</span>
+                            <h3>Pixel people<br>in motion.</h3>
+                            <div class="pixel-cast" data-pixel-cast tabindex="0" aria-label="Hover to animate two pixel characters walking in three directions">
+                                <canvas class="pixel-actor pixel-actor-one" data-pixel-actor="one" width="190" height="260" aria-hidden="true"></canvas>
+                                <canvas class="pixel-actor pixel-actor-two" data-pixel-actor="two" width="180" height="240" aria-hidden="true"></canvas>
+                            </div>
+                            <p>Directional character studies built frame by frame for a school-themed game world. Each pose explores readable silhouettes, consistent uniforms, and expressive movement at a tiny scale.</p>
+                            <div class="tag-row"><span class="tag">Pixel art</span><span class="tag">Piskel</span><span class="tag">2D animation</span><span class="tag">Game assets</span></div>
+                            <span class="chapter-number">02</span>
+                        </div>
+                    </article>
+
+                    <article class="art-chapter reveal">
+                        <div class="art-carousel" data-carousel data-label="Archive 03 · Motion desk">
+                            <div class="slide active"><button type="button" data-lightbox><img src="assets/video editing/Screenshot 2026-08-31 212254.png" alt="Adobe After Effects motion typography workspace"></button></div>
+                            <div class="slide"><button type="button" data-lightbox><img src="assets/video editing/Screenshot 2026-08-31 212324.png" alt="Motion graphics editing project workspace"></button></div>
+                            <div class="carousel-controls"><button class="carousel-arrow prev" type="button" aria-label="Previous motion design image"><i class="fa-solid fa-arrow-left"></i></button><div class="carousel-dots"></div><button class="carousel-arrow next" type="button" aria-label="Next motion design image"><i class="fa-solid fa-arrow-right"></i></button></div>
+                        </div>
+                        <div class="art-copy"><span class="scribble">type that refuses to sit still</span><h3>Motion, cuts<br>& little surprises.</h3><p>Typography and visual experiments made in the editing room. I use timing, camera movement, layering, and contrast to give simple graphic elements a stronger voice.</p><div class="tag-row"><span class="tag">After Effects</span><span class="tag">Premiere Pro</span><span class="tag">Motion design</span><span class="tag">Video editing</span></div><span class="chapter-number">03</span></div>
+                    </article>
+
+                    <article class="art-chapter reveal">
+                        <div class="art-carousel" data-carousel data-label="Archive 04 · Interface notebook">
+                            <div class="slide active"><button type="button" data-lightbox><img src="assets/wireframe website/Screenshot 2026-08-31 210745.png" alt="Teacher attendance interface wireframe"></button></div>
+                            <div class="slide"><button type="button" data-lightbox><img src="assets/wireframe website/Screenshot 2026-08-31 210759.png" alt="Teacher attendance dashboard interface"></button></div>
+                            <div class="slide"><button type="button" data-lightbox><img src="assets/wireframe website/Screenshot 2026-08-31 210834.png" alt="Attendance tracking dashboard design"></button></div>
+                            <div class="slide"><button type="button" data-lightbox><img src="assets/wireframe website/Screenshot 2026-08-31 210910.png" alt="Attendance calendar interface design"></button></div>
+                            <div class="carousel-controls"><button class="carousel-arrow prev" type="button" aria-label="Previous interface image"><i class="fa-solid fa-arrow-left"></i></button><div class="carousel-dots"></div><button class="carousel-arrow next" type="button" aria-label="Next interface image"><i class="fa-solid fa-arrow-right"></i></button></div>
+                        </div>
+                        <div class="art-copy"><span class="scribble">complex systems, calmer screens</span><h3>Interfaces for<br>real routines.</h3><p>Wireframes and working screens for a teacher-room attendance platform. The goal: turn schedules, QR verification, location signals, and live room data into an interface people can understand at a glance.</p><div class="tag-row"><span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">React</span><span class="tag">Systems design</span></div><span class="chapter-number">04</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="process">
+            <div class="page-shell">
+                <header class="section-heading reveal"><span class="section-count">03 / How I make</span><h2>From scribble<br>to screen.</h2><p>My process stays playful, but every experiment has a purpose.</p></header>
+                <div class="process-strip reveal">
+                    <article class="process-step"><span>01 ✎</span><h3>Notice</h3><p>Find the useful problem, strange detail, or visual idea worth exploring.</p></article>
+                    <article class="process-step"><span>02 ◌</span><h3>Sketch</h3><p>Map the flow, collect references, and make the rough idea visible quickly.</p></article>
+                    <article class="process-step"><span>03 ⚙</span><h3>Build</h3><p>Prototype the interaction, system, or asset and test it in context.</p></article>
+                    <article class="process-step"><span>04 ✦</span><h3>Polish</h3><p>Tighten the rhythm, hierarchy, motion, and tiny moments people remember.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="page-shell">
+                <div class="contact-sheet noise-card reveal">
+                    <div><span class="eyebrow" style="color:var(--red)">04 / Send a paper plane</span><h2>Have an idea?<br><span>Let’s make it.</span></h2><p>I’m open to student collaborations, creative development projects, multimedia work, and opportunities where technology can have a little more personality.</p></div>
+                    <div class="contact-links">
+                        <a class="contact-link" href="mailto:jessiejamesparajes@gmail.com"><span>Email me</span><i class="fa-solid fa-paper-plane"></i></a>
+                        <a class="contact-link" href="https://github.com/jessiejames1234" target="_blank" rel="noopener noreferrer"><span>GitHub experiments</span><i class="fa-brands fa-github"></i></a>
+                        <a class="contact-link" href="https://linkedin.com/in/jessie-james-parajes-81b77a2a0" target="_blank" rel="noopener noreferrer"><span>LinkedIn profile</span><i class="fa-brands fa-linkedin"></i></a>
+                        <a class="contact-link" href="tel:+639060344441"><span>+63 906 034 4441</span><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><div class="page-shell footer-wrap"><span>© <span id="year"></span> Jessie James C. Parajes</span><span>Built with code, paper scraps & too many ideas.</span></div></footer>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Artwork preview" hidden>
+        <button class="round-button lightbox-close" id="lightbox-close" type="button" aria-label="Close artwork preview"><i class="fa-solid fa-xmark"></i></button>
+        <img id="lightbox-image" src="" alt="">
+    </div>
+
+    <script src="js/main.js"></script>
+    <script type="module" src="robots/profile-crawler.js"></script>
+    <script type="module" src="robots/rust-guard.js"></script>
+</body>
+</html>
