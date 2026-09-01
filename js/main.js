@@ -67,16 +67,28 @@
         }
     });
 
+    const closeMobileMenu = () => {
+        navLinks.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.querySelector('i').className = 'fa-solid fa-bars';
+    };
+
     menuButton.addEventListener('click', () => {
         const open = navLinks.classList.toggle('open');
         menuButton.setAttribute('aria-expanded', String(open));
         menuButton.querySelector('i').className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
     });
-    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        menuButton.setAttribute('aria-expanded', 'false');
-        menuButton.querySelector('i').className = 'fa-solid fa-bars';
-    }));
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+    addEventListener('keydown', event => {
+        if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+            closeMobileMenu();
+            menuButton.focus();
+        }
+    });
+    const mobileNavigationQuery = matchMedia('(max-width: 720px)');
+    mobileNavigationQuery.addEventListener('change', event => {
+        if (!event.matches) closeMobileMenu();
+    });
 
     const revealObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
