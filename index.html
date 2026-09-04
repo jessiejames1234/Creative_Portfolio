@@ -21,14 +21,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="css/style.css?v=20260902-2">
+    <link rel="stylesheet" href="css/style.css?v=20260905-17">
 </head>
 
 <body>
+    <div class="archive-loader" aria-hidden="true">
+        <div class="archive-loader-paper">
+            <span>Jessie’s Creative Archive</span>
+        </div>
+    </div>
     <span class="ink-cursor" aria-hidden="true"></span>
 
     <header class="topbar">
-        <div class="progress" aria-hidden="true"><span id="scroll-progress"></span></div>
+        <div class="progress" aria-hidden="true">
+            <span id="scroll-progress"><i class="progress-pencil fa-solid fa-pencil"></i></span>
+        </div>
         <nav class="page-shell nav-wrap" aria-label="Primary navigation">
             <a class="brand" href="#top">JESSIE<span>.MAKES</span></a>
             <div class="nav-links" id="nav-links">
@@ -60,18 +67,25 @@
                 <div class="portrait-stage reveal" data-tilt-wrap>
                     <div class="portrait-brackets" aria-hidden="true"></div>
                     <div class="portrait-tilt-group" data-tilt-card>
-                        <span class="tape one" aria-hidden="true"></span>
-                        <span class="tape two" aria-hidden="true"></span>
-                        <div class="hello-arm" aria-hidden="true">
-                            <img src="assets/generated/human-hi-arm.png" alt="">
+                        <div class="portrait-shake-group">
+                            <span class="tape one" aria-hidden="true"></span>
+                            <span class="tape two" aria-hidden="true"></span>
+                            <div class="photo-camera" aria-hidden="true">
+                                <div class="camera-body">
+                                    <span class="camera-flash-unit"></span>
+                                    <span class="camera-viewfinder"></span>
+                                    <span class="camera-lens"><i></i></span>
+                                    <span class="camera-shutter"></span>
+                                </div>
+                            </div>
+                            <div class="portrait-frame">
+                                <img src="assets/for profile/professional.png" alt="Professional portrait of Jessie James C. Parajes">
+                                <span class="portrait-caption">Jessie, in the wild ✦</span>
+                            </div>
+                            <div class="profile-crawler-grip-stage" data-profile-crawler-front aria-hidden="true"></div>
+                            <span class="orbit-note a">code + color<br>+ curiosity</span>
+                            <span class="orbit-note b">currently building<br>weird little worlds →</span>
                         </div>
-                        <div class="portrait-frame">
-                            <img src="assets/for profile/sample2.jpg" alt="Portrait of Jessie James C. Parajes">
-                            <span class="portrait-caption">Jessie, in the wild ✦</span>
-                        </div>
-                        <div class="profile-crawler-grip-stage" data-profile-crawler-front aria-hidden="true"></div>
-                        <span class="orbit-note a">code + color<br>+ curiosity</span>
-                        <span class="orbit-note b">currently building<br>weird little worlds →</span>
                     </div>
                 </div>
             </div>
@@ -114,7 +128,7 @@
 
                 <div class="gallery-stack">
                     <article class="art-chapter reveal">
-                        <div class="art-carousel" data-carousel data-label="Archive 01 · 3D character lab">
+                        <div class="art-carousel" data-carousel data-transition="model-turn" data-label="Archive 01 · 3D character lab">
                             <div class="slide active"><button type="button" data-lightbox><img src="assets/3D art animation/Screenshot 2026-08-31 211152.png" alt="3D scrap crawler character model"></button></div>
                             <div class="slide"><button type="button" data-lightbox><img src="assets/3D art animation/Screenshot 2026-08-31 211207.png" alt="3D robot character with shield"></button></div>
                             <div class="slide"><button type="button" data-lightbox><img src="assets/3D art animation/Screenshot 2026-08-31 211227.png" alt="3D stylized combat character"></button></div>
@@ -124,11 +138,24 @@
                             </video>
                             <div class="carousel-controls"><button class="carousel-arrow prev" type="button" aria-label="Previous 3D artwork"><i class="fa-solid fa-arrow-left"></i></button><div class="carousel-dots"></div><button class="carousel-arrow next" type="button" aria-label="Next 3D artwork"><i class="fa-solid fa-arrow-right"></i></button></div>
                         </div>
-                        <div class="art-copy"><span class="scribble">built from boxes, bolts & attitude</span><h3>Robots with<br>odd jobs.</h3><p>A lineup of stylized 3D enemies and allies designed around clear combat roles. Shape language, color blocking, and exaggerated equipment make every unit recognizable before it even moves.</p><div class="tag-row"><span class="tag">Blender</span><span class="tag">Three.js</span><span class="tag">Character design</span><span class="tag">3D animation</span></div><span class="chapter-number">01</span></div>
+                        <div class="art-copy">
+                            <span class="scribble">built from boxes, bolts & attitude</span><h3>Robots Design<br>3D animation.</h3>
+                            <p>A lineup of stylized 3D enemies and allies designed around clear combat roles. Shape language, color blocking, and exaggerated equipment make every unit recognizable before it even moves.</p>
+                            <div class="project-process" data-project-process>
+                                <div class="project-process-tabs" role="tablist" aria-label="3D robot design process">
+                                    <button class="active" type="button" role="tab" aria-selected="true" data-slide="0" data-note="Define each robot’s purpose, personality, and readable combat silhouette.">Idea</button>
+                                    <button type="button" role="tab" aria-selected="false" data-slide="1" data-note="Block the design with simple shapes before committing to small details.">Sketch</button>
+                                    <button type="button" role="tab" aria-selected="false" data-slide="2" data-note="Build modular body parts and test their proportions from every angle.">Build</button>
+                                    <button type="button" role="tab" aria-selected="false" data-slide="3" data-note="Polish the materials, colors, equipment, and animation-ready presentation.">Final</button>
+                                </div>
+                                <p class="project-process-note" aria-live="polite">Define each robot’s purpose, personality, and readable combat silhouette.</p>
+                            </div>
+                            <div class="tag-row"><span class="tag">Three.js</span><span class="tag">Character design</span><span class="tag">3D animation</span></div><span class="chapter-number">01</span>
+                        </div>
                     </article>
 
                     <article class="art-chapter reveal">
-                        <div class="art-carousel" data-carousel data-label="Archive 02 · Sprite studies">
+                        <div class="art-carousel" data-carousel data-transition="pixel-dissolve" data-label="Archive 02 · Sprite studies">
                             <div class="slide active"><button type="button" data-lightbox><img src="assets/2d pixelated pixel art animation/Screenshot 2026-01-27 145216 (1) (1).png" alt="Pixel art male character walk cycle sprite sheet"></button></div>
                             <div class="slide"><button type="button" data-lightbox><img src="assets/2d pixelated pixel art animation/Screenshot 2026-01-29 0857411.png" alt="Pixel art female character walk cycle sprite sheet"></button></div>
                             <div class="carousel-controls"><button class="carousel-arrow prev" type="button" aria-label="Previous pixel art"><i class="fa-solid fa-arrow-left"></i></button><div class="carousel-dots"></div><button class="carousel-arrow next" type="button" aria-label="Next pixel art"><i class="fa-solid fa-arrow-right"></i></button></div>
@@ -141,29 +168,64 @@
                                 <canvas class="pixel-actor pixel-actor-two" data-pixel-actor="two" width="180" height="240" aria-hidden="true"></canvas>
                             </div>
                             <p>Directional character studies built frame by frame for a school-themed game world. Each pose explores readable silhouettes, consistent uniforms, and expressive movement at a tiny scale.</p>
-                            <div class="tag-row"><span class="tag">Pixel art</span><span class="tag">Piskel</span><span class="tag">2D animation</span><span class="tag">Game assets</span></div>
+                            <div class="project-process" data-project-process>
+                                <div class="project-process-tabs" role="tablist" aria-label="Pixel character process">
+                                    <button class="active" type="button" role="tab" aria-selected="true" data-slide="0" data-note="Choose two student personalities that remain recognizable at a tiny scale.">Idea</button>
+                                    <button type="button" role="tab" aria-selected="false" data-slide="0" data-note="Draft the front, left, and right poses with clear silhouettes.">Sketch</button>
+                                    <button type="button" role="tab" aria-selected="false" data-slide="1" data-note="Animate every walk-cycle frame and keep the body volume consistent.">Build</button>
+                                    <button type="button" role="tab" aria-selected="false" data-slide="1" data-note="Test the sprites at gameplay size and clean distracting pixels.">Final</button>
+                                </div>
+                                <p class="project-process-note" aria-live="polite">Choose two student personalities that remain recognizable at a tiny scale.</p>
+                            </div>
+                            <div class="tag-row"><span class="tag">Pixel art</span><span class="tag">Sprite</span><span class="tag">Piskel</span><span class="tag">2D animation</span><span class="tag">Game assets</span></div>
                             <span class="chapter-number">02</span>
                         </div>
                     </article>
 
                     <article class="art-chapter reveal">
-                        <div class="art-carousel" data-carousel data-label="Archive 03 · Motion desk">
+                        <div class="art-carousel" data-carousel data-transition="film-strip" data-label="Archive 03 · Motion desk">
                             <div class="slide active"><button type="button" data-lightbox><img src="assets/video editing/Screenshot 2026-08-31 212254.png" alt="Adobe After Effects motion typography workspace"></button></div>
                             <div class="slide"><button type="button" data-lightbox><img src="assets/video editing/Screenshot 2026-08-31 212324.png" alt="Motion graphics editing project workspace"></button></div>
                             <div class="carousel-controls"><button class="carousel-arrow prev" type="button" aria-label="Previous motion design image"><i class="fa-solid fa-arrow-left"></i></button><div class="carousel-dots"></div><button class="carousel-arrow next" type="button" aria-label="Next motion design image"><i class="fa-solid fa-arrow-right"></i></button></div>
                         </div>
-                        <div class="art-copy"><span class="scribble">type that refuses to sit still</span><h3>Motion, cuts<br>& little surprises.</h3><p>Typography and visual experiments made in the editing room. I use timing, camera movement, layering, and contrast to give simple graphic elements a stronger voice.</p><div class="tag-row"><span class="tag">After Effects</span><span class="tag">Premiere Pro</span><span class="tag">Motion design</span><span class="tag">Video editing</span></div><span class="chapter-number">03</span></div>
+                        <div class="art-copy">
+                            <span class="scribble">every frame earns its place</span><h3>Editing Ideas<br>Into Motion.</h3>
+                            <p>Typography and visual experiments made in the editing room. I use timing, camera movement, layering, and contrast to give simple graphic elements a stronger voice.</p>
+                            <div class="project-process" data-project-process>
+                                <div class="project-process-tabs" role="tablist" aria-label="Motion editing process">
+                                    <button class="active" type="button" role="tab" aria-selected="true" data-slide="0" data-note="Choose the message, mood, and visual rhythm the edit should communicate.">Idea</button>
+                                    <button type="button" role="tab" aria-selected="false" data-slide="0" data-note="Arrange a rough sequence to test pacing before adding effects.">Sketch</button>
+                                    <button type="button" role="tab" aria-selected="false" data-slide="1" data-note="Layer typography, cuts, camera movement, and supporting graphics.">Build</button>
+                                    <button type="button" role="tab" aria-selected="false" data-slide="1" data-note="Tune timing and contrast, then prepare the polished final export.">Final</button>
+                                </div>
+                                <p class="project-process-note" aria-live="polite">Choose the message, mood, and visual rhythm the edit should communicate.</p>
+                            </div>
+                            <div class="tag-row"><span class="tag">After Effects</span><span class="tag">Premiere Pro</span><span class="tag">Motion design</span><span class="tag">Video editing</span></div><span class="chapter-number">03</span>
+                        </div>
                     </article>
 
                     <article class="art-chapter reveal">
-                        <div class="art-carousel" data-carousel data-label="Archive 04 · Interface notebook">
+                        <div class="art-carousel" data-carousel data-transition="blueprint-draw" data-label="Archive 04 · Interface notebook">
                             <div class="slide active"><button type="button" data-lightbox><img src="assets/wireframe website/Screenshot 2026-08-31 210745.png" alt="Teacher attendance interface wireframe"></button></div>
                             <div class="slide"><button type="button" data-lightbox><img src="assets/wireframe website/Screenshot 2026-08-31 210759.png" alt="Teacher attendance dashboard interface"></button></div>
                             <div class="slide"><button type="button" data-lightbox><img src="assets/wireframe website/Screenshot 2026-08-31 210834.png" alt="Attendance tracking dashboard design"></button></div>
                             <div class="slide"><button type="button" data-lightbox><img src="assets/wireframe website/Screenshot 2026-08-31 210910.png" alt="Attendance calendar interface design"></button></div>
                             <div class="carousel-controls"><button class="carousel-arrow prev" type="button" aria-label="Previous interface image"><i class="fa-solid fa-arrow-left"></i></button><div class="carousel-dots"></div><button class="carousel-arrow next" type="button" aria-label="Next interface image"><i class="fa-solid fa-arrow-right"></i></button></div>
                         </div>
-                        <div class="art-copy"><span class="scribble">complex systems, calmer screens</span><h3>Interfaces for<br>real routines.</h3><p>Wireframes and working screens for a teacher-room attendance platform. The goal: turn schedules, QR verification, location signals, and live room data into an interface people can understand at a glance.</p><div class="tag-row"><span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">React</span><span class="tag">Systems design</span></div><span class="chapter-number">04</span></div>
+                        <div class="art-copy">
+                            <span class="scribble">clarity for every click</span><h3>Designed for<br>Real-World Workflows.</h3>
+                            <p>Wireframes and working screens for a teacher-room attendance platform. The goal: turn schedules, QR verification, location signals, and live room data into an interface people can understand at a glance.</p>
+                            <div class="project-process" data-project-process>
+                                <div class="project-process-tabs" role="tablist" aria-label="Interface design process">
+                                    <button class="active" type="button" role="tab" aria-selected="true" data-slide="0" data-note="Map the attendance problems, users, and information each screen needs.">Idea</button>
+                                    <button type="button" role="tab" aria-selected="false" data-slide="1" data-note="Turn the workflow into low-fidelity wireframes and clear screen paths.">Sketch</button>
+                                    <button type="button" role="tab" aria-selected="false" data-slide="2" data-note="Connect schedules, QR verification, and live room states in the interface.">Build</button>
+                                    <button type="button" role="tab" aria-selected="false" data-slide="3" data-note="Refine the hierarchy so busy users can understand every state at a glance.">Final</button>
+                                </div>
+                                <p class="project-process-note" aria-live="polite">Map the attendance problems, users, and information each screen needs.</p>
+                            </div>
+                            <div class="tag-row"><span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">WireFrame</span></div><span class="chapter-number">04</span>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -186,10 +248,10 @@
                 <div class="contact-sheet noise-card reveal">
                     <div><span class="eyebrow" style="color:var(--red)">04 / Send a paper plane</span><h2>Have an idea?<br><span>Let’s make it.</span></h2><p>I’m open to student collaborations, creative development projects, multimedia work, and opportunities where technology can have a little more personality.</p></div>
                     <div class="contact-links">
-                        <a class="contact-link" href="mailto:jessiejamesparajes@gmail.com"><span>Email me</span><i class="fa-solid fa-paper-plane"></i></a>
+                        <a class="contact-link" href="mailto:parajes@jess.creative"><span>parajes@jess.creative</span><i class="fa-solid fa-paper-plane"></i></a>
                         <a class="contact-link" href="https://github.com/jessiejames1234" target="_blank" rel="noopener noreferrer"><span>GitHub experiments</span><i class="fa-brands fa-github"></i></a>
                         <a class="contact-link" href="https://linkedin.com/in/jessie-james-parajes-81b77a2a0" target="_blank" rel="noopener noreferrer"><span>LinkedIn profile</span><i class="fa-brands fa-linkedin"></i></a>
-                        <a class="contact-link" href="tel:+639060344441"><span>+63 906 034 4441</span><i class="fa-solid fa-phone"></i></a>
+                        <a class="contact-link" href="tel:09667034467"><span>09667034467</span><i class="fa-solid fa-phone"></i></a>
                     </div>
                 </div>
             </div>
@@ -203,7 +265,7 @@
         <img id="lightbox-image" src="" alt="">
     </div>
 
-    <script src="js/main.js?v=20260902-1"></script>
+    <script src="js/main.js?v=20260905-3"></script>
     <script type="module" src="robots/profile-crawler.js"></script>
     <script type="module" src="robots/rust-guard.js"></script>
 </body>

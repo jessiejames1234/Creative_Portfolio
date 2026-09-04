@@ -114,6 +114,9 @@
     document.querySelectorAll('[data-carousel]').forEach((carousel, carouselIndex) => {
         const slides = [...carousel.querySelectorAll('.slide')];
         const dotsWrap = carousel.querySelector('.carousel-dots');
+        const process = carousel.closest('.art-chapter')?.querySelector('[data-project-process]');
+        const processButtons = process ? [...process.querySelectorAll('[data-slide]')] : [];
+        const processNote = process?.querySelector('.project-process-note');
         let current = 0;
         let timer;
         slides.forEach((_, index) => {
@@ -125,11 +128,35 @@
             dotsWrap.appendChild(dot);
         });
         const dots = [...dotsWrap.children];
-        const show = index => {
+        const syncProcess = (slideIndex, requestedStage = null) => {
+            if (!processButtons.length || !processNote) return;
+            const stageIndex = requestedStage ?? processButtons.findIndex(button => Number(button.dataset.slide) === slideIndex);
+            if (stageIndex < 0) return;
+            processButtons.forEach((button, index) => {
+                const active = index === stageIndex;
+                button.classList.toggle('active', active);
+                button.setAttribute('aria-selected', String(active));
+            });
+            processNote.textContent = processButtons[stageIndex].dataset.note;
+            if (!reducedMotion && processNote.animate) {
+                processNote.animate(
+                    [{ opacity: .2, transform: 'translateY(5px)' }, { opacity: 1, transform: 'translateY(0)' }],
+                    { duration: 220, easing: 'ease-out' }
+                );
+            }
+        };
+        const show = (index, requestedStage = null) => {
             current = (index + slides.length) % slides.length;
             slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
             dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+            syncProcess(current, requestedStage);
         };
+        processButtons.forEach((button, stageIndex) => {
+            button.addEventListener('click', () => {
+                show(Number(button.dataset.slide), stageIndex);
+                schedule();
+            });
+        });
         const schedule = () => {
             clearTimeout(timer);
             if (!reducedMotion && slides.length > 1) timer = setTimeout(() => { show(current + 1); schedule(); }, 3800 + carouselIndex * 160);
@@ -264,11 +291,20 @@
     addEventListener('keydown', event => { if (event.key === 'Escape' && !lightbox.hidden) closeLightbox(); });
 
     const progress = document.querySelector('#scroll-progress');
+    let progressFrame = 0;
+    let previousScrollY = scrollY;
     const updateProgress = () => {
         const max = document.documentElement.scrollHeight - innerHeight;
-        progress.style.width = `${max > 0 ? (scrollY / max) * 100 : 0}%`;
+        const percentage = max > 0 ? Math.min(100, Math.max(0, (scrollY / max) * 100)) : 0;
+        const scrollingDown = scrollY >= previousScrollY;
+        progress.style.width = `${percentage}%`;
+        progress.style.setProperty('--pencil-angle', scrollingDown ? '-13deg' : '-20deg');
+        previousScrollY = scrollY;
+        progressFrame = 0;
     };
-    addEventListener('scroll', updateProgress, { passive: true });
+    addEventListener('scroll', () => {
+        if (!progressFrame) progressFrame = requestAnimationFrame(updateProgress);
+    }, { passive: true });
     updateProgress();
 
     const cursor = document.querySelector('.ink-cursor');
